@@ -106,9 +106,25 @@
             <li>创之轨迹</li>
         </ol>
         <h1>表单</h1>
-        <form action="server address">
-            <!--type:submit提交按钮 button按钮 text文本框 password密码框 checkbox复选框 radio单选框 reset清空按钮-->
-            <input type="submit" value="提交按钮"/>
+        <!--method:get:提交的表单会显示在url中 post:提交的数据内容和get相同，但不在url中显示
+        超链接亦可提交数据，但表单的name:value对不变，且为get请求-->
+        <form action="server address" method="post">
+            <!--type:submit提交按钮 button按钮 text文本框 password密码框 checkbox复选框 radio双选项单选框 reset清空按钮 
+            name:提交数据的变量名，必要
+            通过令radio的name一样，实现单选 加checked表示默认选择
+            文本框的value由用户定义，自定义可用于默认值-->
+            <input type="submit" value="提交按钮" name="sub"/>
+            性别：<input type="radio" name="gender" value="1" checked/>男<input type="radio" name="gender" value="0"/>女
+            学历：
+            <!--select:给定下拉选项单选 selected默认-->
+            <select name="grade">
+                <option value="primary" selected>小学</option>
+                <option value="middle">中学</option>
+                <option value="undergraduate">本科</option>
+            </select>
+            <br>
+            <!--textarea:文本域-->
+            <textarea rows="10" cols="100"></textarea>
         </form> 
     </body>
 </html>
