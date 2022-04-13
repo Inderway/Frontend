@@ -3,12 +3,20 @@
 
 <!--root-->
 <html lang="zh-CN">
-    <!--中文-->
+    <!--指示浏览器用何种字符集打开页面-->
     <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Title of the site</title>
     </head>
-    <body>
+    <!--bgcolor:背景色 background:背景图片-->
+    <body bgcolor="yellow" background="E:\Github\Frontend\resource\2022-2.jpg">
         Main content of the site。主体内容
+        <!--数越大，标题越小-->
+        <h1>
+            标题字
+        </h1>
+        <h2>
+            标题字
+        </h2>
         <!--段落-->
         <p>
             段落1
@@ -68,13 +76,39 @@
             <tfoot>
             </tfoot>
         </table>
+        <h1>图片</h1>
+        <!--设置宽度后，高度会按比例自调整。若自定义高度，则图片失真
+        title:鼠标悬停时显示信息 fail:图片加载失败信息-->
+        <img src="E:\Github\Frontend\resource\kiseki.png" width="50%" title="轨迹入坑指南" alt="fail"/>
+        <h1>超链接</h1>
+        <!--加img变成图片超链接，图片和文字都有时，有两个超链接
+        target:新页面打开方式，_blank为新标签，_self为本标签 _top为顶级标签 _parent为父标签(后两者用于窗口嵌套)-->
+        <a href="https://www.baidu.com" target="_blank"> 
+            <img src="E:\Github\Frontend\resource\kiseki.png" width="100px"/>
+            百度</a>
+        <h1>列表</h1>
+        <h2>无序列表</h2>
+        <ul type="circle">
+            <li>空之轨迹
+                <ul type="square">
+                    <li>艾丝蒂尔</li>
+                    <li>约修亚</li>
+                </ul>
+            </li>
 
-        <!--数越大，标题越小-->
-        <h1>
-            标题字
-        </h1>
-        <h2>
-            标题字
-        </h2>
+            <li>零之轨迹</li>
+            <li>闪之轨迹</li>
+            <li>黎之轨迹</li>
+        </ul>
+        <h2>有序列表(带序号, 序号类型由type决定)</h2>
+        <ol type="a">
+            <li>空之轨迹</li>
+            <li>创之轨迹</li>
+        </ol>
+        <h1>表单</h1>
+        <form action="server address">
+            <!--type:submit提交按钮 button按钮 text文本框 password密码框 checkbox复选框 radio单选框 reset清空按钮-->
+            <input type="submit" value="提交按钮"/>
+        </form> 
     </body>
 </html>
