@@ -31,6 +31,44 @@
             右<sup>上角</sup>
             右<sub>下角</sub>
         </p>
+        <p>
+            实体符号（以&开始，以;结尾）<br>
+            <!--小于，大于-->
+            a&lt;b b&gt;a
+            空格&nbsp;
+        </p>
+        <!--标题居中-->
+        <center><h1>表格</h1></center>
+        <!--border:边框 width:单元格宽度(值可以为百分比)-->
+        <table border="1px" width="300px" height="300px">
+            <!--tr为一行，td为一单元格
+            align:对齐方式，作用于一个标签
+            th:表格列标题，自动居中比加粗
+            用thead, tbody, tfoot区分头体脚
+            -->
+            <thead>
+                <tr>
+                    <th>A</th><th>B</th><th>C</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr align="center">
+                    <td colspan="2">b</td><td>c</td>
+                </tr>
+                <tr>
+                    <!--rowspan:和下面x-1个单元格合并，需要手动将下面单元格的数据删除
+                    colspan:和右(左)边x-1个单元格合并，需要手动删除不需要的数据
+                    -->
+                    <td colspan="2">d</td><td rowspan="2">f</td>
+                </tr>
+                <tr>
+                    <td>g</td><td>h</td>
+                </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+
         <!--数越大，标题越小-->
         <h1>
             标题字
