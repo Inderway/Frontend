@@ -116,8 +116,9 @@
             <input type="submit" value="提交按钮" name="sub"/>
             性别：<input type="radio" name="gender" value="1" checked/>男<input type="radio" name="gender" value="0"/>女
             学历：
-            <!--select:给定下拉选项单选 selected默认-->
-            <select name="grade">
+            <!--select:给定下拉选项单选 selected默认
+            multiple="multiple"支持多选 size显示条数-->
+            <select name="grade" size="3">
                 <option value="primary" selected>小学</option>
                 <option value="middle">中学</option>
                 <option value="undergraduate">本科</option>
@@ -125,6 +126,29 @@
             <br>
             <!--textarea:文本域-->
             <textarea rows="10" cols="100"></textarea>
+            <br>
+            <!--选择文件-->
+            <input type="file"/>
+            <!--hidden:隐藏域,网页不可见,但表单提交时数据会被一并提交-->
+            <input type="hidden" name="NNN" value="111"/>
+            <br>
+            <!--只读,disabled的数据不会提交-->
+            <input type="text" value="只读" name="ro" readonly/>
+            <br>
+            <input type="text" value="不可更改" name="da" disabled/>
+            <br>
+            <!--maxlength:输入上限-->
+            <input type="text" value="输入的最大长度为20" name="ml" maxlength="20"/>
         </form> 
+        <h1>元素id</h1>
+        <!--在标签中添加id字段指示id
+        用于获取元素-->
+        <form id="fform"></form>
+        <h1>div和span</h1>
+        <!--div和span为图层
+            用于页面灵活布局
+        div独自占一行，span不-->
+        <div id="div1">I'm div1</div><div id="div2">I'm div2</div>
+        <span id="span1">I'm span1</span><span id="span2">I'm span2</span>
     </body>
 </html>
