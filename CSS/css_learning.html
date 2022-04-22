@@ -22,17 +22,89 @@
                 font:normal bold 20px "宋体";
             }
             /*类选择器
-            .classname*/
+            .classname
+            一般以实现的样式命名*/
             .van {
                 color:blue;
             }
+            .font30{
+                font-size:30px;
+            }
+            /*id选择器
+            区别于类选择器，类选择器可多次使用，但id选择器（规定）仅可用一次
+            因为id要用来定位元素，若使用多次无法精确定位*/
+            #pink{
+                color:pink;
+            }
+            /*伪类选择器，
+            链接伪类选择器：针对a(超链接)*/
+            #judice:link{/*未访问的链接*/
+                font-size:20px;
+                color:gray;
+                font-weight:bold;
+            }
+            #judice:visited{/*已访问的链接，已click一次,一般不用*/
+                font-size:20px;
+                color:orange;
+                font-weight:bold;
+            }
+            #judice:hover{/*悬停的链接*/
+                font-size:30px;
+                color:yellow;
+                font-weight:bold;
+            }
+            #judice:active{/*选定的链接,鼠标press时的样式，一般不用*/
+                font-size:30px;
+                color:black;
+                font-weight:bold;
+            }
+            
+            
+            /*结构伪类选择器
+            标签的父元素的孩子(即自己的兄弟或自己的样式)*/
+            li:first-child{
+                color:gray;
+            }
+            li:last-child{
+                color:yellow;
+            }
+            li:nth-child(2){/*参数可为even(偶数),odd(奇数),an+b(通项,n从0开始)*/
+                color:black;
+            }
+            li:nth-last-child(2)/*最后一个child为起点*/{
+                color:orange;
+            }
+            /*目标伪类选择器
+            当前活动目标的样式*/
+            #nite:target{
+                color:gray;
+            }
+            #dasvany:target{
+                color:brown;
+            }
+
         </style>
     </head>
     <body>
         <h1>英雄传说黎之轨迹</h1>
         <h2>里解决屋</h2>
         <!--调用类样式-->
-        <div class="van">范·阿克莱德</div>
+        <div class="van font30">范·阿克莱德</div>
+        <div id="pink">亚妮艾丝</div>
+        <div><a href="#"  id="judice" target="_blank">茱迪丝</a></div>
         <h2>特殊角色主要</h2>
+        <ul>
+            <li><a href="#nite">奈特</a></li>
+            <li><a href="#dasvany">达斯瓦尼</a></li>
+            <li>卡艾拉</li>
+            <li>科迪</li>
+        </ul>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div id="nite">奈特搜查官</div><br>
+        <div id="dasvany">达斯瓦尼警部</div><br>
     </body>
 </html>
+<!--注释1
+
+
+-->
