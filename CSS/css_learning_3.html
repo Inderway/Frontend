@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /*子元素选择器，只选择孩子，其后代不选择，可通过嵌套来选择孙子（x>y>z）
+        区别于后代选择器
+        要先写后代选择器，再写子元素选择器才有效果。顺序不能错，后代选择器不能不写*/
+        .nav li{
+            color:yellow;
+        }
+        .nav > li {
+            color:red;
+        }
+        /*属性选择器
+        包含该属性的标签
+        中括号里也可写成attr=value的形式，value可不加引号*/
+        a[title]{
+            color:red;
+        }
+        /*^=表示选择以后面字符串开头的value
+        $=表示选择以后面字符串结尾的value
+        *=表示出现后面的字符串即匹配*/
+        div[class^=font]{
+            font-size:24px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li>
+            一级
+            <ul>
+                <li>二级</li>
+                <li>二级</li>
+                <li>二级</li>
+            </ul>
+        </li>
+    </ul>
+    <a href="#" title="标题">内容</a>
+    <div class="font24">属性选择器</div>
+</body>
+</html>

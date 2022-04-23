@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!--出现在此处为内部样式表
+    可放在任何地方，但一般放在head里
+    type="text/CSS"在html5中可省略-->
     <style>
         /*行间距
         首行缩进：em为一个字的宽度*/
@@ -20,12 +23,36 @@
         div {
             /*字间距*/
             letter-spacing: 15px;
+            /*显示模式转换
+            inline:块转行内 block:行内转块 inline-block:行内转行内块*/
+            display:inline;
         }
-        span {
+
+
+        .red{
+            /*单词间距*/
+            color:red;
+        }
+        /*交集选择器
+        以下类仅作用于span*/
+        span.red{
             /*单词间距*/
             word-spacing: 15px;
+            color:red;
         }
+        /*并集选择器*/
+        h2,.h3,.h4{
+            font-size:40px;
+        }
+        /*后代选择器
+        该类中的p标签的样式*/
+        .child p{
+            color:orange;
+        }
+
     </style>
+    <!--外部样式表-->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>标题</h1>
@@ -47,7 +74,10 @@
         加大，传统产业改造升级、新兴行业创新发展的势头增强，将有利于带动产业投资增长。</p>
 
     <div>中国经济</div>
-    <span>Chinese Economy</span>
+    <span>Chinese Economy</span><br>
+    <div style="color:pink;">内联（行内）样式表</div><br>
+    <div class="outer">外部样式表</div><br>
+    <div class="child"><p>后代选择器</p></div><br>
     
 </body>
 </html>
