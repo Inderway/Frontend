@@ -24,6 +24,25 @@
         div[class^=font]{
             font-size:24px;
         }
+        div[class^=con]{
+            font-size:40px;
+        }
+
+        /*背景简写
+        颜色 地址 平铺 对象附着 位置
+        颜色可写在最后*/
+        body {
+            background: #000 url("E:/Github/Frontend/resource/2022-2.jpg") no-repeat fixed center -50px;
+        }
+
+        /*凹凸效果*/
+        .convex{
+            text-shadow:1px 1px 1px #000,-1px -1px 1px #fff;
+        }
+        .concave{
+            text-shadow:-1px -1px 1px #000,1px 1px 1px #fff;
+        }
+
     </style>
 </head>
 <body>
@@ -39,5 +58,7 @@
     </ul>
     <a href="#" title="标题">内容</a>
     <div class="font24">属性选择器</div>
+    <div class="convex">凸起效果</div>
+    <div class="concave">凹陷效果</div>
 </body>
 </html>
