@@ -43,7 +43,22 @@
             text-shadow:-1px -1px 1px #000,1px 1px 1px #fff;
         }
 
-    </style>
+        /*边框综合写法*/
+        .border{
+            border-top: 1px solid red;/*宽1，实线，红*/
+            border-bottom: 1px solid red;
+        }
+        
+        table{
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            border-collapse: collapse;/*合并相邻边框。由于每个td都有一个边框，因此td相邻时有边框重叠*/
+        }
+        td{
+            border: 1px solid red;
+        }
+    </style>0
 </head>
 <body>
     <ul class="nav">
@@ -60,5 +75,18 @@
     <div class="font24">属性选择器</div>
     <div class="convex">凸起效果</div>
     <div class="concave">凹陷效果</div>
+    <div class="border">边框样式</div>
+    <br>
+    <table>
+        <tr>
+            <td>x</td><td>x</td><td>x</td><td>x</td><td>x</td>
+        </tr>
+        <tr>
+            <td>x</td><td>x</td><td>x</td><td>x</td><td>x</td>
+        </tr>
+        <tr>
+            <td>x</td><td>x</td><td>x</td><td>x</td><td>x</td>
+        </tr>
+    </table>
 </body>
 </html>

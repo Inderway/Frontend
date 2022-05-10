@@ -1,0 +1,114 @@
+/*导入opensans字体*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+/*声明全局css变量*/
+/*--标识变量名，通过var()调用*/
+:root {
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+}
+
+*{
+    /*表示盒子的内容+border+padding的总宽度为width，而不是仅内容区宽度为width*/
+    box-sizing:border-box;
+}
+
+body {
+    background-color: #f9fafb;
+    /*字体族名(family-name)和通用字体族名(generic-name)（用于在指定字体不可用时）*/
+    font-family: 'Open Sans', sans-serif;
+    /*Flex布局，元素一维延伸（按行或按列），有主轴和侧轴（交叉轴，垂直于主轴）*/
+    display: flex;
+    /*元素在侧轴居中*/
+    align-items: center;
+    /*元素在主轴居中*/
+    justify-content: center;
+    /*元素最低高度：100%可视区高度*/
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 5px;
+    /*盒子阴影：x轴偏移 y轴偏移 模糊半径 颜色*/
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+}
+
+h2 {
+    text-align: center;
+    /*上 左右 下*/
+    margin: 0 0 20px;
+}
+
+.form {
+    /*上下 左右*/
+    padding: 30px 40px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    /*元素不脱离文档流，因此原位置仍占据空间*/
+    position: relative;
+}
+
+.form-control label {
+    color: #777;
+    /*元素按垂直顺序排列*/
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    /*宽 样式 颜色*/
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/*用户点击或触摸或选定是触发*/
+.form-control input:focus {
+    /*不占据空间，绘制元素周围*/
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control.success input {
+    border-color: var(--success-color);
+}
+
+.form-control.error input {
+    border-color: var(--error-color);
+}
+
+.form-control small {
+    color: var(--error-color);
+    /*元素移出文档流*/
+    position: absolute;
+    /*绝对定位下元素与border的偏移*/
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form button {
+    cursor: pointer;
+    background-color: #3498db;
+    border: 2px solid #3498db;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+}

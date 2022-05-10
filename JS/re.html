@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+<script>
+    var str="learn re";
+    /*修饰符i:执行对大小写不敏感匹配
+    g: 执行全局匹配，查询所有匹配结果而非在第一个结果停止
+    m: 多行匹配*/
+    var n=str.search(/re/i);//返回re开始位置 也可用字符串直接作为参数 i可以不加，表示对大小写敏感
+    document.getElementById("p1").innerHTML=n;
+    var res=str.replace(/re/i,"regular expression");//替换
+    document.getElementById("p2").innerHTML=res;
+    var pat=new RegExp("re");//定义模式
+    document.write(pat.test(str));//test返回是否匹配
+    pat.compile("reg");//改变模式
+    document.write(pat.test(str));
+</script>
+</body>
+</html>

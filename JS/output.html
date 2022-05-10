@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Output</title>
+</head>
+<body>
+    <h1>标题</h1>
+    <p id="para">段落</p>
+    <button onclick="b_fun1()">click me</button>
+<script>
+    window.alert("hello world");
+    document.getElementById("para").innerHTML="audit paragraph";
+    console.log("log1");
+    //文档加载完成后执行write，则整个页面被覆盖
+    function b_fun1(){
+        document.write(Date());
+    }
+</script>
+</body>
+</html>
