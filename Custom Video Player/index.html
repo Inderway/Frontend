@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Video Player</title>
+    <!--link到cdn时，使用属性integrity和crossorigin
+    integrity允许浏览器检查脚本，并在脚本修改后不予执行。integrity指定
+    一串hash值，浏览器通过对比脚本的hash确定脚本是否执行-->
+    <!--anonymous表示对link元素的cors请求不设置标志-->
+    <!--Cross-Origin Resource Sharing跨域资源共享是基于HTTP头的机制，其允许服务器指定其余
+    的数据来源。-->
+  <link
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="css/progress.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <h1>Custom Video Player</h1>
+  <video
+    src="videos/sample.webm"
+    id="video"
+    class="screen"
+    poster="img/poster.png"
+  ></video> 
+  <div class="controls">
+    <button class="btn" id="play">
+      <!--i文本区分于普通文本-->
+      <i class="fa fa-play fa-2x"></i>
+    </button>
+    <button class="btn" id="stop">
+      <i class="fa fa-stop fa-2x"></i>
+    </button>
+    <!--range指示输入range范围内的随机数-->
+    <input
+      type="range"
+      id="progress"
+      class="progress"
+      min="0"
+      max="100"
+      step="0.1"
+      value="0"
+    />
+    <span class="timestamp" id="timestamp">00:00</span>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
