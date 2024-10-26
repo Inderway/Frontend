@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VUE</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!--通过v-model绑定数据模型，也可用{{}}获取数据模型的数据-->
+        {{message}}
+    </div>
+
+<!--此处为js代码-->
+<!--通过cdn引入vue-->
+<script>
+    // 创建vue核心对象，定义数据模型
+    const { createApp, ref } = Vue
+    createApp({
+    setup() {
+        const message = ref('Hello vue!')
+        return {
+            message
+        }
+    }
+    }).mount('#app')
+</script>
+</body>
+</html>
